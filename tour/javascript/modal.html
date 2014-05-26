@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Introduction to Twitter Bootstrap">
+        <meta name="author" content="Joseph Guadagno">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Introduction to Twitter Bootstrap - Tour - JavaScript - Modal</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link id="bootstrapTheme" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/cerulean/bootstrap.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/docs.min.css" rel="stylesheet">
+        <link href="/css/site.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Intro to Twitter Bootstrap</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/index.html">Welcome</a></li>
+                        <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">The Tour <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a href="#">Getting Started</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/tour/getting_started/download.html">Download</a></li>
+                                        <li><a href="/tour/getting_started/template.html">Template</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#">Grid System</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/tour/grid_system/introduction.html">Introduction</a></li>
+                                        <li><a href="/tour/grid_system/media_queries.html">Media Queries</a></li>
+                                        <li><a href="/tour/grid_system/grid_options.html">Grid Options</a></li>
+                                        <li><a href="/tour/grid_system/examples.html">Examples</a></li>
+                                        <li><a href="/tour/grid_system/responsive_columns.html">Responsive Columns</a></li>
+                                        <li><a href="/tour/grid_system/offsetting_columns.html">Offsetting Columns</a></li>
+                                        <li><a href="/tour/grid_system/nesting_columns.html">Nesting Columns</a></li>
+                                        <li><a href="/tour/grid_system/ordering_columns.html">Ordering Columns</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#">CSS</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/tour/css/typography.html">Typography</a></li>
+                                        <li><a href="/tour/css/tables.html">Tables</a></li>
+                                        <li><a href="/tour/css/forms.html">Forms</a></li>
+                                        <li><a href="/tour/css/buttons.html">Buttons</a></li>
+                                        <li><a href="/tour/css/images.html">Images</a></li>
+                                        <li><a href="/tour/css/helper_classes.html">Helper Classes</a></li>
+                                        <li><a href="/tour/css/responsive_utilities.html">Responsive Utilities</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#">Components</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/tour/components/icons.html">Icons</a></li><li><a href="/tour/components/font_awesome.html">Font Awesome</a></li>
+                                        <li><a href="/tour/components/dropdowns.html">Dropdowns</a></li>
+                                        <li><a href="/tour/components/buttons.html">Buttons</a></li><li><a href="/tour/components/button_dropdowns.html">Button Dropdowns</a></li>
+                                        <li><a href="/tour/components/input_groups.html">Input Groups</a></li><li><a href="/tour/components/navs.html">Navs</a></li>
+                                        <li><a href="/tour/components/navbars.html">Navbars</a></li>
+                                        <li><a href="/tour/components/labels.html">Labels</a></li>
+                                        <li><a href="/tour/components/thumbnails.html">Thumbnails</a></li>
+                                        <li><a href="/tour/components/alerts.html">Alerts</a></li>
+                                        <li><a href="/tour/components/progressbars.html">Progressbars</a></li>
+                                        <li><a href="/tour/components/listgroups.html">Lists Groups</a></li>
+                                        <li><a href="/tour/components/panels.html">Panels</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#">Javascript</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/tour/javascript/overview.html">Overview</a></li><li><a href="/tour/javascript/modal.html">Modal</a></li>
+                                        <li><a href="/tour/javascript/scrollspy.html">Scroll Spy</a></li>
+                                        <li><a href="/tour/javascript/dropdown.html">Dropdown</a></li>
+                                        <li><a href="/tour/javascript/tooltip.html">Tooltip</a></li>
+                                        <li><a href="/tour/javascript/popover.html">Popover</a></li>
+                                        <li><a href="/tour/javascript/alert.html">Alert</a></li>
+                                        <li><a href="/tour/javascript/button.html">Button</a></li>
+                                        <li><a href="/tour/javascript/collapse.html">Collapse</a></li>
+                                        <li><a href="/tour/javascript/carousel.html">Carousel</a></li>
+                                        <li><a href="/tour/javascript/affix.html">Affix</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bootstrap Site <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a></li>
+                                <li><a href="http://getbootstrap.com/getting-started" target="_blank">Getting Started</a></li>
+                                <li><a href="http://getbootstrap.com/css" target="_blank">CSS</a></li>
+                                <li><a href="http://getbootstrap.com/components" target="_blank">Components</a></li>
+                                <li><a href="http://getbootstrap.com/javascript" target="_blank">JavaScript</a></li>
+                                <li><a href="http://getbootstrap.com/customize" target="_blank">Customize</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Bootstrap Sites <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://www.fontawesome.io" target="_blank">Font Awesome (icons)</a></li>
+                                <li><a href="http://bootswatch.com/" target="_blank">Bootswatch (themes)</a></li>
+                                <li><a href="http://builtwithbootstrap.com/" target="_blank">Built with Bootstrap</a></li>
+                                <li><a href="http://www.bootstraphero.com/the-big-badass-list-of-twitter-bootstrap-resources" target="_blank">Bad a$$ list of twitter bootstrap resources</a></li>
+                                <li><a href="http://averagemarcus.github.io/Bootstrap-AcknowledgeInputs/" target="_blank">Bootstrap Acknowledge</a></li>
+                                <li><a href="http://josephguadagno.net/post/2014/01/24/Twitter-Bootstrap-Resources" target="_blank">More Twitter Bootstrap Resources</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">CDNs <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://www.bootstrapcdn.com/" target="_blank">Bootstrap CDN</a></li>
+                                <li><a href="http://cdnjs.com/" target="_blank">cdnjs</a></li>
+                                <li><a href="http://www.jsdelivr.com/" target="_blank">jsDelivr</a></li>
+                                <li><a href="http://www.asp.net/ajaxlibrary/cdn.ashx" target="_blank">Microsoft Ajax CDN</a></li>
+                                <li><a href="https://developers.google.com/speed/libraries/devguide" target="_blank">Google CDN</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themes <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:setTheme('default', '')">default</a></li>
+                                <li><a href="javascript:setTheme('amelia', '/css/themes/amelia/')">amelia</a></li>
+                                <li><a href="javascript:setTheme('cerulean', '/css/themes/cerulean/')">cerulean</a></li>
+                                <li><a href="javascript:setTheme('cosmo', '/css/themes/cosmo/')">cosmo</a></li>
+                                <li><a href="javascript:setTheme('custom', '/css/themes/custom/')">custom</a></li>
+                                <li><a href="javascript:setTheme('cyborg', '/css/themes/cyborg/')">cyborg</a></li>
+                                <li><a href="javascript:setTheme('darkly', '/css/themes/darkly/')">darkly</a></li>
+                                <li><a href="javascript:setTheme('flatly', '/css/themes/flatly/')">flatly</a></li>
+                                <li><a href="javascript:setTheme('journal', '/css/themes/journal/')">journal</a></li>
+                                <li><a href="javascript:setTheme('lumen', '/css/themes/lumen/')">lumen</a></li>
+                                <li><a href="javascript:setTheme('readable', '/css/themes/readable/')">readable</a></li>
+                                <li><a href="javascript:setTheme('shamrock', '/css/themes/shamrock/')">shamrock</a></li>
+                                <li><a href="javascript:setTheme('simplex', '/css/themes/simplex/')">simplex</a></li>
+                                <li><a href="javascript:setTheme('slate', '/css/themes/slate/')">slate</a></li>
+                                <li><a href="javascript:setTheme('spacelab', '/css/themes/spacelab/')">spacelab</a></li>
+                                <li><a href="javascript:setTheme('superhero', '/css/themes/superhero/')">superhero</a></li>
+                                <li><a href="javascript:setTheme('united', '/css/themes/united/')">united</a></li>
+                                <li><a href="javascript:setTheme('yeti', '/css/themes/yeti/')">yeti</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/about.html">About</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li><a href="/index.html">Welcome</a></li>
+                <li><a href="/tour/index.html">Tour</a></li>
+                <li><a href="/tour/javascript/index.html">JavaScript</a></li>
+                <li class="active">Modal</li>
+            </ol>
+            <div class="page-header">
+                <h1>Modal</h1>
+            </div>
+            <div>
+				<h2 id="modals-examples">Examples</h2>
+  <p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+
+  <div class="bs-callout bs-callout-warning" id="callout-stacked-modals">
+    <h4>Overlapping modals not supported</h4>
+    <p>Be sure not to open a modal while another is still visible. Showing more than one modal at a time requires custom code.</p>
+  </div>
+  <div class="bs-callout bs-callout-warning" id="callout-modal-markup-placement">
+    <h4>Modal markup placement</h4>
+    <p>Always try to place a modal's HTML code in a top-level position in your document to avoid other components affecting the modal's appearance and/or functionality.</p>
+  </div>
+  <div class="bs-callout bs-callout-warning">
+    <h4>Mobile device caveats</h4>
+    <p>There are some caveats regarding using modals on mobile devices. <a href="../getting-started/#support-fixed-position-keyboards">See our browser support docs</a> for details.</p>
+  </div>
+
+  <h3>Static example</h3>
+  <p>A rendered modal with header, body, and set of actions in the footer.</p>
+  <div class="bs-example bs-example-modal">
+    <div class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </div><!-- /example -->
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal fade&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-dialog&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-content&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-header&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;close&quot;</span> <span class="na">data-dismiss=</span><span class="s">&quot;modal&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;modal-title&quot;</span><span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-body&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>One fine body<span class="ni">&amp;hellip;</span><span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-footer&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">data-dismiss=</span><span class="s">&quot;modal&quot;</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-content --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-dialog --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal --&gt;</span>
+</code></pre></div>
+
+  <h3>Live demo</h3>
+  <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+  <!-- sample modal content -->
+  <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
+        </div>
+        <div class="modal-body">
+          <h4>Text in a modal</h4>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+          <h4>Popover in a modal</h4>
+          <p>This <a href="#" role="button" class="btn btn-default popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on click.</p>
+
+          <h4>Tooltips in a modal</h4>
+          <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+          <hr>
+
+          <h4>Overflowing text to show scroll behavior</h4>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="bs-example" style="padding-bottom: 24px;">
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+      Launch demo modal
+    </button>
+  </div><!-- /example -->
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#myModal&quot;</span><span class="nt">&gt;</span>
+  Launch demo modal
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="c">&lt;!-- Modal --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal fade&quot;</span> <span class="na">id=</span><span class="s">&quot;myModal&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span> <span class="na">role=</span><span class="s">&quot;dialog&quot;</span> <span class="na">aria-labelledby=</span><span class="s">&quot;myModalLabel&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-dialog&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-content&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-header&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;close&quot;</span> <span class="na">data-dismiss=</span><span class="s">&quot;modal&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;modal-title&quot;</span> <span class="na">id=</span><span class="s">&quot;myModalLabel&quot;</span><span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-body&quot;</span><span class="nt">&gt;</span>
+        ...
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-footer&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">data-dismiss=</span><span class="s">&quot;modal&quot;</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+
+  <div class="bs-callout bs-callout-warning">
+    <h4>Make modals accessible</h4>
+    <p>Be sure to add <code>role="dialog"</code> to <code>.modal</code>, <code>aria-labelledby="myModalLabel"</code> attribute to reference the modal title, and <code>aria-hidden="true"</code> to tell assistive technologies to skip the modal's DOM elements.</p>
+    <p>Additionally, you may give a description of your modal dialog with <code>aria-describedby</code> on <code>.modal</code>.</p>
+  </div>
+
+  <h2 id="modals-sizes">Optional sizes</h2>
+  <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>.</p>
+  <div class="bs-example">
+    <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+    <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+  </div>
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Large modal --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.bs-example-modal-lg&quot;</span><span class="nt">&gt;</span>Large modal<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal fade bs-example-modal-lg&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span> <span class="na">role=</span><span class="s">&quot;dialog&quot;</span> <span class="na">aria-labelledby=</span><span class="s">&quot;myLargeModalLabel&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-dialog modal-lg&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-content&quot;</span><span class="nt">&gt;</span>
+      ...
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Small modal --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.bs-example-modal-sm&quot;</span><span class="nt">&gt;</span>Small modal<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal fade bs-example-modal-sm&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span> <span class="na">role=</span><span class="s">&quot;dialog&quot;</span> <span class="na">aria-labelledby=</span><span class="s">&quot;mySmallModalLabel&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-dialog modal-sm&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-content&quot;</span><span class="nt">&gt;</span>
+      ...
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+  <!--  Modal content for the above example -->
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+  <h2 id="modals-usage">Usage</h2>
+  <p>The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also adds <code>.modal-open</code> to the <code>&lt;body&gt;</code> to override default scrolling behavior and generates a <code>.modal-backdrop</code> to provide a click area for dismissing shown modals when clicking outside the modal.</p>
+
+  <h3>Via data attributes</h3>
+  <p>Activate a modal without writing JavaScript. Set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#myModal&quot;</span><span class="nt">&gt;</span>Launch modal<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+
+  <h3>Via JavaScript</h3>
+  <p>Call a modal with id <code>myModal</code> with a single line of JavaScript:</p>
+  <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</code></pre></div>
+
+  <h3>Options</h3>
+  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+       <tr>
+         <th style="width: 100px;">Name</th>
+         <th style="width: 50px;">type</th>
+         <th style="width: 50px;">default</th>
+         <th>description</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+         <td>backdrop</td>
+         <td>boolean or the string <code>'static'</code></td>
+         <td>true</td>
+         <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
+       </tr>
+       <tr>
+         <td>keyboard</td>
+         <td>boolean</td>
+         <td>true</td>
+         <td>Closes the modal when escape key is pressed</td>
+       </tr>
+       <tr>
+         <td>show</td>
+         <td>boolean</td>
+         <td>true</td>
+         <td>Shows the modal when initialized.</td>
+       </tr>
+       <tr>
+         <td>remote</td>
+         <td>path</td>
+         <td>false</td>
+         <td><p>If a remote URL is provided, <strong>content will be loaded one time</strong> via jQuery's <code>load</code> method and injected into the <code>.modal-content</code> div. If you're using the data-api, you may alternatively use the <code>href</code> attribute to specify the remote source. An example of this is shown below:</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">href=</span><span class="s">&quot;remote.html&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#modal&quot;</span><span class="nt">&gt;</span>Click me<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+         </td>
+       </tr>
+      </tbody>
+    </table>
+  </div><!-- /.table-responsive -->
+
+  <h3>Methods</h3>
+
+  <h4>.modal(options)</h4>
+  <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span>
+  <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">})</span>
+</code>pre></div>
+
+  <h4>.modal('toggle')</h4>
+  <p>Manually toggles a modal. <strong>Returns to the caller before the modal has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.modal</code> or <code>hidden.bs.modal</code> event occurs).</p>
+  <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">&#39;toggle&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+  <h4>.modal('show')</h4>
+  <p>Manually opens a modal. <strong>Returns to the caller before the modal has actually been shown</strong> (i.e. before the <code>shown.bs.modal</code> event occurs).</p>
+  <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+  <h4>.modal('hide')</h4>
+  <p>Manually hides a modal. <strong>Returns to the caller before the modal has actually been hidden</strong> (i.e. before the <code>hidden.bs.modal</code> event occurs).</p>
+  <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+  <h3>Events</h3>
+  <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+       <tr>
+         <th style="width: 150px;">Event Type</th>
+         <th>Description</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+         <td>show.bs.modal</td>
+         <td>This event fires immediately when the <code>show</code> instance method is called. If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+       </tr>
+       <tr>
+         <td>shown.bs.modal</td>
+         <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+       </tr>
+       <tr>
+         <td>hide.bs.modal</td>
+         <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+       </tr>
+       <tr>
+         <td>hidden.bs.modal</td>
+         <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+       </tr>
+       <tr>
+         <td>loaded.bs.modal</td>
+         <td>This event is fired when the modal has loaded content using the remote option.</td>
+       </tr>
+      </tbody>
+    </table>
+  </div><!-- /.table-responsive -->
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// do something...</span>
+<span class="p">})</span>
+</code></pre></div>
+</div>
+
+			</div>
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-fixed-bottom">
+                <div class="navbar-inner navbar-content-center">
+                    <p>
+                        <div class="col-sm-1 col-xs-1"><a href="/tour/javascript/index.html" class="btn btn-default"><i class="fa fa-angle-left"></i></a></div>
+                        <div class="col-sm-3 col-xs-7 navbar-brand">
+                            <p class="text-center">&copy;2013-2014, Joseph Guadagno</p>
+                        </div>
+                        <div class="col-sm-3 hidden-xs">
+                            <a class="navbar-text" href="http://www.josephguadagno.net" target="_blank" title="josephguadagno.net">josephguadagno.net</a>
+                        </div>
+                        <div class="col-sm-2 hidden-xs">
+                            <a class="navbar-text" href="http://www.twitter.com/jguadagno" target="_blank">@jguadagno</a>
+                        </div>
+                        <div class="col-sm-2 col-xs-3 navbar-brand center-block">
+                            <p class="text-center">Size: <span id="width"></span> x <span id="height"></span></p>
+                        </div>
+                        <div class="col-sm-1 col-xs-1"><a href="/tour/javascript/dropdown.html" class="btn btn-default pull-right"><i class="fa fa-angle-right"></i></a></div>
+                    </p>
+                </div>
+            </nav>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.cookie.js"></script>
+        <script src="/js/site.js"></script>
+    </body>
+</html>
