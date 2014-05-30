@@ -2,7 +2,7 @@ $().ready(function() {
     var tour = new Tour({
         name: "tour",
         backdrop: false,
-        debug: true,
+        debug: false,
         orphan: false,
         steps: [
             {
