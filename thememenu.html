@@ -7,8 +7,8 @@
         <meta name="description" content="Introduction to Twitter Bootstrap">
         <meta name="author" content="Joseph Guadagno">
         <link rel="shortcut icon" href="favicon.ico">
-        <title>Introduction to Twitter Bootstrap - Tour - Grid System - Nesting Columns</title>        
-        <link id="bootstrapTheme" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/cerulean/bootstrap.min.css" rel="stylesheet">
+        <title>Introduction to Twitter Bootstrap - Theme Switcher Test</title>
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="/css/docs.min.css" rel="stylesheet">
         <link href="/css/site.css" rel="stylesheet">
@@ -17,8 +17,8 @@
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        </head>
+        <![endif] -->
+	</head>
 
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -147,51 +147,24 @@
         </nav>
         <div class="container-fluid">
             <ol class="breadcrumb">
-                <li><a href="/index.html">Welcome</a></li>
-                <li><a href="/tour/index.html">Tour</a></li>
-                <li><a href="/tour/grid_system/index.html">Grid System</a></li>
-                <li class="active">Nesting Columns</li>
+                <li class="active"><a href="/thememenu.html">Theme Switcher Test</a></li>
             </ol>
             <div class="page-header">
-                <h1>Nesting Columns</h1>
+                <h1>Theme Switcher Test</h1>
+                <p class="lead">Theme Switcher Test</p>
             </div>
-            <div>
-				<p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-md-*</code> columns within an existing <code>.col-md-*</code> column. Nested rows should include a set of columns that add up to 12 or less.</p>
-                <div class="row show-grid">
-                    <div class="col-md-9">
-                      Level 1: .col-md-9
-                      <div class="row show-grid">
-                        <div class="col-md-6">
-                          Level 2: .col-md-6
-                        </div>
-                        <div class="col-md-6">
-                          Level 2: .col-md-6
-                        </div>
-                      </div>
-                    </div>
-                </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-9&quot;</span><span class="nt">&gt;</span>
-    Level 1: .col-md-9
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-6&quot;</span><span class="nt">&gt;</span>
-        Level 2: .col-md-6
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-6&quot;</span><span class="nt">&gt;</span>
-        Level 2: .col-md-6
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-
-			</div>
+            <div class="form-group">
+                <label>Themes</label>
+                <select id="ThemeSelect" class="form-control">
+                    <option>Default</option>
+                </select>
+            </div>
         </div>
         <div class="container">
             <nav class="navbar navbar-inverse navbar-fixed-bottom">
                 <div class="navbar-inner navbar-content-center">
-                    <p>
-                        <div class="col-xs-1 col-sm-1 "><a href="/tour/grid_system/offsetting_columns.html" class="btn btn-default"><i class="fa fa-angle-left"></i></a></div>
+                    <div>
+                        <div class="col-xs-1 col-sm-1 "><a href="#" class="btn btn-default"><i class="fa fa-angle-left"></i></a></div>
                         <div class="col-xs-10 col-sm-3">
                             <p class="text-center navbar-text">&copy;2013-2014, Joseph Guadagno</p>
                         </div>
@@ -204,8 +177,8 @@
                         <div class="hidden-xs col-sm-2">
                             <p class="text-center navbar-text"><span id="width"></span> x <span id="height"></span></p>
                         </div>
-                        <div class="col-xs-1 col-sm-1"><a href="ordering_columns.html" class="btn btn-default pull-right"><i class="fa fa-angle-right"></i></a></div>
-                    </p>
+                        <div class="col-xs-1 col-sm-1"><a href="/tour/index.html" class="btn btn-default pull-right"><i class="fa fa-angle-right"></i></a></div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -216,5 +189,19 @@
         <script src="/js/jquery.cookie.js"></script>
 		<script src="/js/jquery.bootstrapThemeSwitcher.js"></script>
         <script src="/js/site.js"></script>
+        <script>
+            $().ready(function () {
+
+                // Setup the theme selectors
+                $('#ThemeSelect').bootstrapThemeSwitcher();
+
+                // Change the theme
+                //$().bootstrapThemeSwitcher('switchTheme', 'default', '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css');
+
+                // Load the previously selected theme from the cookies
+                //$().bootstrapThemeSwitcher('loadThemeFromCookie');
+
+            });
+        </script>
     </body>
 </html>
