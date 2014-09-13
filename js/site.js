@@ -12,17 +12,17 @@ $().ready(function () {
     $('#loading-example-btn').click(function () {
         var btn = $(this);
         btn.button('loading');
-        setTimeout(function () {btn.button('reset'); }, 2000);
+        window.setTimeout(function () {btn.button('reset'); }, 2000);
     });
 
     // Setup the theme selectors
     $('#ThemeList').bootstrapThemeSwitcher();
 
     // Change the theme
-    //$().bootstrapThemeSwitcher('switchTheme', 'default', '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css');
+    //$().bootstrapThemeSwitcher('switchTheme', 'default', '//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
 
     // Load the previously selected theme from the cookies
-    $().bootstrapThemeSwitcher('loadThemeFromCookie');
+    //$().bootstrapThemeSwitcher('loadThemeFromCookie');
 
     /* Updates the footer with the client size */
     $(window).resize(onWindowResize);
