@@ -1,3 +1,4 @@
+/* global Tour */
 $().ready(function() {
     var tour = new Tour({
         name: "tour",
