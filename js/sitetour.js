@@ -27,13 +27,13 @@ $().ready(function() {
             {
                 element: "a:contains('Bootstrap Site'):first",
                 title: "Bootstrap Sites",
-                content: "Links to the Twitter Bootstrap site and documentation.",
+                content: "Links to the Bootstrap site and documentation.",
                 placement: "bottom"
             },
             {
                 element: "a:contains('Other Bootstrap Sites')",
                 title: "Other Bootstrap Sites",
-                content: "Links to other sites the provide themes, plugins, components or helpful tips on Twitter Bootstrap.",
+                content: "Links to other sites the provide themes, plugins, components or helpful tips on Bootstrap.",
                 placement: "bottom"
             },
             {

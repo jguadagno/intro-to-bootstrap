@@ -1,4 +1,4 @@
-Introduction to Twitter Bootstrap
+Introduction to Bootstrap
 =================================
 
-The demo site for my Introduction to Twitter Bootstrap talk.
+The demo site for my Introduction to Bootstrap talk.

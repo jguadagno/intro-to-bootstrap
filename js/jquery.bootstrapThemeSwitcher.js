@@ -1,5 +1,5 @@
 /**
-* jQuery Twitter Bootstrap Theme Switcher v1.0.0
+* jQuery Bootstrap Theme Switcher v1.0.0
 * http://jguadagno.github.io/bootstrapThemeSwitcher/
 *
 * Copyright 2014, Joseph Guadagno
